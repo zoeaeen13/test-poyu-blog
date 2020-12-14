@@ -42,8 +42,8 @@ body{margin:0;background:#ECF3F2}
 .about-details .sub-position{margin-bottom:10px;display:block}
 .about-details .details{padding:0;list-style:none;border-top:2px solid #eee;padding-top:30px;margin-bottom:30px}
 .about-details .details li{display:flex;align-items:center;margin-bottom:10px}
-.about-details .details li p{margin:0;}
-.about-details .details li strong{width:160px}
+.about-details .details li p{margin:0 10px;}
+.about-details .details li strong{width:80px}
 .about-details .socials ul{margin:0;padding:0;list-style:none;display:flex}
 .about-details .socials ul li{margin-right:10px}
 .about-details .socials ul li a{text-decoration:none;width:40px;height:40px;display:flex;justify-content:center;align-items:center;border:2px solid #333;color:#333;position:relative;overflow:hidden}
@@ -120,7 +120,7 @@ h2:after,
 .blog-post .details img{margin:0 auto;float:none;display:block;margin-bottom:30px}
 pre{margin-bottom:0}
 .banner .gatsby-image-wrapper{height:100vh;width:100%}
-.about-main .left .gatsby-image-wrapper{width:300px;height:300px;margin:0 auto;}
+.about-main .left .gatsby-image-wrapper{width:300px;height:300px;}
 .about-main .left .gatsby-image-wrapper img{object-position:top center!important;}
 .slick-slider .slick-list .avatar{width:100px;height:100px}
 .about-details p img{width:45px}
@@ -193,8 +193,11 @@ code{background-color:#333;border-radius:3px;margin-bottom:30px;display:block;pa
     .work-list .item{width:50%}
     .photos-page-list .item{width:50%}
     .blog-post .feature-img{height:400px}
+    .about-details .details li p{display:block;width:80%;}
+    .about-details .details li strong{width:30%;}
 }
 @media only screen and (max-width:767px){
+    .blog-container{padding: 50px 20px;}
     .site-header .header-main .logo{width:90%;width:calc(100% - 30px)}
     .site-header .header-main{flex-wrap:wrap;align-items:center;justify-content:flex-start}
     .site-header .header-main .menu{position:fixed;top:0;right:-100%;bottom:0;width:100%;z-index:1;background:#000000c9;z-index:999;padding:80px 0 0 0;-webkit-transition:0.3s all;transition:0.3s all}
