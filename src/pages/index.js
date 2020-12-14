@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
   <Layout header="home">
     <SEO
       title={data.contentfulAboutMe.designation}
-      keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`]}
+      keywords={[`登山`, `玉山`]}
     />
     <Banner data={data.contentfulAboutMe}></Banner>
 
@@ -30,26 +30,31 @@ const IndexPage = ({ data }) => (
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Service")
       .map(t => {
-        return <Service data={data.allContentfulService}></Service>;
-      })}
+        const num = data.allContentfulService.edges.length
+        return <Service num={num} data={data.allContentfulService}></Service>;
+      }
+      )}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Blogs")
       .map(t => {
-        return <Blogs data={data.allContentfulBlogs}></Blogs>;
+        const num = data.allContentfulService.edges.length
+        return <Blogs num={num} data={data.allContentfulBlogs}></Blogs>;
       })}
 
-    {data.contentfulSiteInformation.menus
+    {/* {data.contentfulSiteInformation.menus
       .filter(item => item === "Work")
       .map(t => {
         return <Work data={data.allContentfulWorks}></Work>;
-      })}
+      })} */}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Testimonials")
       .map(t => {
+        const num = data.allContentfulTestimonials.edges.length
+        console.log()
         return (
-          <Testimonial data={data.allContentfulTestimonials}></Testimonial>
+          <Testimonial num={num} data={data.allContentfulTestimonials}></Testimonial>
         );
       })}
 

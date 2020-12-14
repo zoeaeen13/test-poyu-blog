@@ -33,15 +33,15 @@ export default class blogPost extends Component {
         <SEO
           title={data.title}
           keywords={[
-            `Rohit Gupta`,
-            `Frontend Developer`,
-            `Developer`,
+            `邱泊瑜`,
+            `登山`,
             `${data.title}`
           ]}
         />
-        <div className="site-container blog-post">
+        <div className="blog-container blog-post">
           <div className="container">
-            {data.featureImage ? (
+            {/* post cover */}
+            {/* {data.featureImage ? (
               <Img
                 className="feature-img"
                 fixed={data.featureImage.fluid}
@@ -50,12 +50,12 @@ export default class blogPost extends Component {
               />
             ) : (
               <div className="no-image"></div>
-            )}
+            )} */}
 
             <div className="details">
               <h1 className="title">{data.title}</h1>
               <span className="date">
-                <i class="fas fa-calendar-alt"></i>{" "}
+                {/* <i class="fas fa-calendar-alt"></i>{" "} */}
                 {moment(data.createdAt).format("LL")}
               </span>
               <div
@@ -64,7 +64,7 @@ export default class blogPost extends Component {
                 }}
               />
             </div>
-            <Share
+            {/* <Share
               socialConfig={{
                 ...socialConfigss.site.siteMetadata.twiteerhandletitle,
                 config: {
@@ -72,7 +72,7 @@ export default class blogPost extends Component {
                   title: `${socialConfigss.title}`
                 }
               }}
-            />
+            /> */}
             <DiscussionEmbed
               shortname={disqusShortname}
               config={disqusConfig}

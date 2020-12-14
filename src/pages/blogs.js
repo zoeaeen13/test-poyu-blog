@@ -9,12 +9,12 @@ import SEO from "../components/seo";
 
 export default class Blogs extends Component {
   render() {
-    const { data } = this.props;
+    const { data, num } = this.props;
     return (
       <Layout>
         <SEO
           title="Blogs"
-          keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`, `Blogs`]}
+          keywords={[`Poyu Chiu`, `邱泊瑜`, `Developer`, `Blogs`]}
         />
         <div className="site-container blogs-page" id="Blogs">
           <div className="container">
@@ -27,29 +27,31 @@ export default class Blogs extends Component {
               }`}
             >
               {data.allContentfulBlogs.edges.map((item, index) => {
-                return (
-                  <li key={index} className="item">
-                    <div className="inner">
-                      <Link className="link" to={item.node.slug} />
-                      {item.node.featureImage ? (
-                        <Img
-                          fixed={item.node.featureImage.fluid}
-                          objectFit="cover"
-                          objectPosition="50% 50%"
-                        />
-                      ) : (
-                        <div className="no-image"></div>
-                      )}
-                      <div className="details">
-                        <h3 className="title">{item.node.title}</h3>
-                        <span className="date">
-                          <i className="fas fa-calendar-alt"></i>{" "}
-                          {moment(item.node.createdAt).format("LL")}
-                        </span>
+                if (index % 2 === 0) {
+                  return (
+                    <li key={index} className="item">
+                      <div className="inner">
+                        <Link className="link" to={item.node.slug} />
+                        {item.node.featureImage ? (
+                          <Img
+                            fixed={item.node.featureImage.fluid}
+                            objectFit="cover"
+                            objectPosition="50% 50%"
+                          />
+                        ) : (
+                          <div className="no-image"></div>
+                        )}
+                        <div className="details">
+                          <h3 className="title">{item.node.title}</h3>
+                          <span className="date">
+                            {/* <i className="fas fa-calendar-alt"></i>{" "} */}
+                            {moment(item.node.createdAt).format("LL")}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                );
+                    </li>
+                  );  
+                }
               })}
             </ul>
           </div>

@@ -38,7 +38,7 @@ export default class Photos extends Component {
       <div className="photos section" id="Photos">
         <div className="container">
           <div className="section-head">
-            <h2>Photos</h2>
+            <h2>活動紀錄</h2>
           </div>
           <div className="slider-section photos-list">
             <Slider {...settings}>
@@ -55,11 +55,11 @@ export default class Photos extends Component {
               })}
             </Slider>
           </div>
-          <div className="see-more">
+          {/* <div className="see-more">
             <Link to="/photos">
-              <span>More Photo</span>
+              <span>更多活動照片</span>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     );

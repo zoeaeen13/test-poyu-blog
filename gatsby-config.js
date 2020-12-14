@@ -4,7 +4,9 @@ if (process.env.ENVIRONMENT !== "production") {
   dotenv.config();
 }
 
-const { spaceId, accessToken } = process.env;
+// const { spaceId, accessToken } = process.env;
+const spaceId = 'egfx5ep8fxvp';
+const accessToken = 'sGeoAVoRIG1g5yS2_aFU23TT0M0mOOZ4pJrAD1Pbzpo';
 
 module.exports = {
   siteMetadata: {

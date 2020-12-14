@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 export default class Banner extends Component {
   render() {
     const { data } = this.props;
+    console.log('about', data)
     return (
       <div className="banner">
         <Img
@@ -13,8 +14,7 @@ export default class Banner extends Component {
         />
         <div className="container">
           <div className="banner-details">
-            <span>Hello...</span>
-            <h1>I'm {data.designation}.</h1>
+            <h1>Poyu Chiu</h1>
             <ul className="sub-data">
               {data.bannerList.map((item, index) => {
                 return <li key={index}>{item}</li>;
@@ -31,16 +31,8 @@ export default class Banner extends Component {
               </li>
               <li>
                 <a
-                  className="fab fa-twitter"
-                  href={data.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
-              <li>
-                <a
-                  className="fab fa-instagram"
-                  href={data.instagram}
+                  className="fab fa-medium"
+                  href={data.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 ></a>
@@ -49,14 +41,6 @@ export default class Banner extends Component {
                 <a
                   className="fab fa-linkedin-in"
                   href={data.linkdin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
-              <li>
-                <a
-                  className="fab fa-github"
-                  href={data.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 ></a>

@@ -27,7 +27,7 @@ export default class PhotosPage extends Component {
         <div className="site-container blogs-page" id="Blogs">
           <div className="container">
             <div className="section-head">
-              <h1 className="line-heading h2">Photos</h1>
+              <h1 className="line-heading h2">活動照片</h1>
             </div>
             <ul className="photos-page-list">
               {data.contentfulPhotos.photos.map((item, index) => {

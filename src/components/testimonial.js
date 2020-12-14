@@ -13,35 +13,37 @@ var settings = {
 
 export default class Testimonial extends Component {
   render() {
-    const { data } = this.props;
+    const { data, num } = this.props;
     return (
       <div className="slider-section section testimonials" id="Testimonials">
         <div className="container">
           <div className="section-head text-center">
-            <h2>Testimonials</h2>
-            <p>People I've worked with have said some nice things...</p>
+            <h2>山友回饋</h2>
+            <p></p>
           </div>
           <Slider {...settings}>
             {data.edges.map((item, index) => {
-              return (
-                <div key={index} className="testimonials-item">
-                  <div className="testi-inner">
-                    <Img
-                      className="avatar"
-                      fixed={item.node.avatarImage.fluid}
-                      objectFit="cover"
-                      objectPosition="50% 50%"
-                    />
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: item.node.description.childMarkdownRemark.html
-                      }}
-                    />
-                    <h3 className="name">{item.node.name}</h3>
-                    <span className="sub-name">{item.node.subTitle}</span>
+              if (index < num / 2) {
+                return (
+                  <div key={index} className="testimonials-item">
+                    <div className="testi-inner">
+                      <Img
+                        className="avatar"
+                        fixed={item.node.avatarImage.fluid}
+                        objectFit="cover"
+                        objectPosition="50% 50%"
+                      />
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: item.node.description.childMarkdownRemark.html
+                        }}
+                      />
+                      <h3 className="name">{item.node.name}</h3>
+                      <span className="sub-name">{item.node.subTitle}</span>
+                    </div>
                   </div>
-                </div>
-              );
+                );
+              }
             })}
           </Slider>
         </div>
