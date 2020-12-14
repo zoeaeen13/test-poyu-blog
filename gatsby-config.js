@@ -9,6 +9,7 @@ const spaceId = 'egfx5ep8fxvp';
 const accessToken = 'sGeoAVoRIG1g5yS2_aFU23TT0M0mOOZ4pJrAD1Pbzpo';
 
 module.exports = {
+  pathPrefix: "/test-poyu-blog",
   siteMetadata: {
     title: `Rohit Gupta`,
     description: `Personal Site`,
